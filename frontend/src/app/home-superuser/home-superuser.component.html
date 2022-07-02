@@ -11,6 +11,7 @@
   <th>created date</th>
   <th></th>
   <th></th>
+  <th></th>
 </tr>
 </thead>
 <tbody>
@@ -23,6 +24,7 @@
 
   <td><button type="button" class="btn btn-light" [routerLink]="['/update-invoice',post.serialNumber]">update</button></td>
   <td><button type="button" class="btn btn-light" (click)="deleteinvoice(post.id)" style="background-color: rgb(255, 67, 67);"> Delete</button></td>
+  <td><button type="button" class="btn btn-light" [routerLink]="['/invoicehistory',post.serialNumber]">history</button></td>
 
 </tr>
 </tbody>

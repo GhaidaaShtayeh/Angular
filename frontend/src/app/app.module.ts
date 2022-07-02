@@ -19,6 +19,8 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { ItemsComponent } from './items/items.component';
 import { AddItemComponent } from './add-item/add-item.component';
 import { InvoicesHistoryComponent } from './invoices-history/invoices-history.component';
+import { InvoiceItemComponent } from './invoice-item/invoice-item.component';
+import { AddInvoiceItemComponent } from './add-invoice-item/add-invoice-item.component';
 
 
 
@@ -36,7 +38,9 @@ import { InvoicesHistoryComponent } from './invoices-history/invoices-history.co
     NavBarComponent,
     ItemsComponent,
     AddItemComponent,
-    InvoicesHistoryComponent
+    InvoicesHistoryComponent,
+    InvoiceItemComponent,
+    AddInvoiceItemComponent
   ],
   imports: [
     BrowserModule,

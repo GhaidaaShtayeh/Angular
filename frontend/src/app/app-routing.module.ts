@@ -1,3 +1,5 @@
+import { AddInvoiceItemComponent } from './add-invoice-item/add-invoice-item.component';
+import { InvoiceItemComponent } from './invoice-item/invoice-item.component';
 import { AddItemComponent } from './add-item/add-item.component';
 import { ItemsComponent } from './items/items.component';
 import { RegisterComponent } from './register/register.component';
@@ -27,7 +29,9 @@ const routes: Routes = [
   {path: 'dashboread',component:HomeSuperuserComponent},
   {path: 'item',component:ItemsComponent},
   {path:'item/add',component:AddItemComponent},
-  {path:'invoicehistory/:id',component:InvoicesHistoryComponent}
+  {path:'invoicehistory/:id',component:InvoicesHistoryComponent},
+  {path:'invoice-item/:id',component:InvoiceItemComponent},
+  {path:'add-invoice-item/:id',component:AddInvoiceItemComponent}
 
 ];
 

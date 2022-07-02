@@ -13,12 +13,12 @@
 }
 
 .form input,.form button{
-    width : 60%;
+    width : 40%;
     border-radius: 6px;
     margin-top: 10px;
-    height:40px;
-    padding:10px 0x;
-    margin:10px;
+    height:55px;
+    padding:5px 0x;
+    margin:5px;
 
 
 }
@@ -30,7 +30,7 @@
   position:absolute;
 }
 .header{
-width : 60%;
+width : 40%;
 border-radius: 6px;
 border: 1px solid black;
 padding:10px 30px 10px 30px;
@@ -44,7 +44,7 @@ font-family: Tahoma, Verdana, sans-serif;  }
 display:block;
 font-weight: 500;
 border: 1px solid #ffc600;
-padding: 0 35px;
+padding: 0 15px;
 font-size: 20px;
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
@@ -52,7 +52,7 @@ line-height: 50px;
 border-radius: 5px;
   color: #07294d;
   z-index: 5;
-
+  text-align: center;
   background-color: #ffc600;
 }
 .main-btn:hover{
