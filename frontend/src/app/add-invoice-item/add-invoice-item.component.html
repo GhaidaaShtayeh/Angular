@@ -1,0 +1,14 @@
+<app-nav-bar></app-nav-bar>
+
+<div class="addreq">
+  <form class="form" [formGroup]="addstudentform">
+    <h1 class ="header" > Add new item </h1>
+
+    <input formControlName="quantity" type="number" placeholder=" quantity "><br>
+    <input formControlName="itemSerialNumber" type="text" placeholder=" item serial number"><br>
+
+    <button  (click)="onSave()" type="submit" class="main-btn"> Save</button>
+
+  </form>
+
+</div>

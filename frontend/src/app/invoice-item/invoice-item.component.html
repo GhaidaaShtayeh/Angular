@@ -1,0 +1,45 @@
+<app-nav-bar></app-nav-bar>
+<section id="page-banner" class="pt-105 pb-110 bg_cover" data-overlay="8"style="background-image: url(https://img.lovepik.com//back_pic/05/74/56/975bd28b34be95a.jpg_wh860.jpg)" >
+  <br><br>
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-12">
+              <div class="page-banner-cont">
+                  <h2>Invoices Item</h2>
+                  <nav aria-label="breadcrumb">
+                      <ol class="breadcrumb">
+                          <li class="breadcrumb-item"><a href="home">Home</a></li>
+                          <li class="breadcrumb-item active" aria-current="page">invoic item </li>
+                      </ol>
+                  </nav>
+              </div>  <!-- page banner cont -->
+          </div>
+      </div> <!-- row -->
+  </div> <!-- container -->
+  <br><br><br>
+</section>
+<br><br>
+<table>
+  <thead>
+    <tr>
+      <th>Item name</th>
+      <th>Item serial number </th>
+      <th>Quantity</th>
+      <th>unit price </th>
+      <th> Total </th>
+
+    </tr>
+  </thead>
+  <tbody *ngFor="let invoice of inovoicesList">
+    <tr>
+      <td>{{invoice.item.name}}</td>
+      <td>{{invoice.item.serialNumber}}</td>
+      <td>{{invoice.quantity}}</td>
+      <td>{{invoice.item.unitPrice}}</td>
+      <td>{{invoice.item.unitPrice * invoice.quantity}}</td>
+
+    </tr>
+  </tbody>
+  <button  [routerLink]="['/add-invoice-item', id]" class="main-btn"> add new item </button>
+</table>
+
