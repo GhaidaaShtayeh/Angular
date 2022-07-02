@@ -18,6 +18,7 @@ import { JwtModule } from '@auth0/angular-jwt';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { ItemsComponent } from './items/items.component';
 import { AddItemComponent } from './add-item/add-item.component';
+import { InvoicesHistoryComponent } from './invoices-history/invoices-history.component';
 
 
 
@@ -34,7 +35,8 @@ import { AddItemComponent } from './add-item/add-item.component';
     UpdateInvoiceComponent,
     NavBarComponent,
     ItemsComponent,
-    AddItemComponent
+    AddItemComponent,
+    InvoicesHistoryComponent
   ],
   imports: [
     BrowserModule,

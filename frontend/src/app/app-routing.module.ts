@@ -13,6 +13,7 @@ import { CustomersComponent } from './customers/customers.component';
 import { AddCustomerComponent } from './add-customer/add-customer.component';
 import { AddInvoiceComponent } from './add-invoice/add-invoice.component';
 import { UpdateInvoiceComponent } from './update-invoice/update-invoice.component';
+import { InvoicesHistoryComponent } from './invoices-history/invoices-history.component';
 
 
 const routes: Routes = [
@@ -25,7 +26,9 @@ const routes: Routes = [
   {path: 'invoices/add',component:AddInvoiceComponent},
   {path: 'dashboread',component:HomeSuperuserComponent},
   {path: 'item',component:ItemsComponent},
-  {path:'item/add',component:AddItemComponent}
+  {path:'item/add',component:AddItemComponent},
+  {path:'invoicehistory/:id',component:InvoicesHistoryComponent}
+
 ];
 
 @NgModule({

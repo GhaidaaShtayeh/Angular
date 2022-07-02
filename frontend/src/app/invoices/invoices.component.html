@@ -36,8 +36,9 @@
       <td>{{invoice.unitPrice}}</td>
       <td>{{invoice.createdDate | date:'medium' }}</td>
 
-      <td><button type="button" class="btn btn-light" [routerLink]="['/update-invoice',invoice.id]">update</button></td>
+      <td><button type="button" class="btn btn-light" [routerLink]="['/update-invoice',invoice.serialNumber]">update</button></td>
       <td><button type="button" class="btn btn-light" routerLink="/Success" routerLinkActive="active" style="background-color: rgb(255, 67, 67);"> Delete</button></td>
+      <td><button type="button" class="btn btn-light" [routerLink]="['/invoicehistory',invoice.serialNumber]">history</button></td>
 
     </tr>
   </tbody>
