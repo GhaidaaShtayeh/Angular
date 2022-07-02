@@ -1,0 +1,52 @@
+
+<app-nav-bar></app-nav-bar>
+
+<section id="page-banner" class="pt-105 pb-110 bg_cover" data-overlay="8"style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBwJB29mvsUyJwc4lMWf2S1yAHqvw9zt1wWKQpcc15Pfipfn9ocSZhXoPEsa1eUa3o0A&usqp=CAU)" >
+  <br><br>
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-12">
+              <div class="page-banner-cont">
+                  <h2>Customers</h2>
+                  <nav aria-label="breadcrumb">
+                      <ol class="breadcrumb">
+                          <li class="breadcrumb-item"><a href="#">Home</a></li>
+                          <li class="breadcrumb-item active" aria-current="page">customers</li>
+                      </ol>
+                  </nav>
+              </div>  <!-- page banner cont -->
+          </div>
+      </div> <!-- row -->
+  </div> <!-- container -->
+  <br><br><br>
+</section>
+
+
+<br><br>
+<table>
+  <thead>
+    <tr>
+      <th>Serial Number</th>
+      <th>first Name</th>
+      <th>Last Name</th>
+      <th>Mobile</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody  *ngFor="let feedback of feedbackslist">
+    <tr>
+      <td>{{feedback.id}}</td>
+      <td>{{feedback.firstName}}</td>
+      <td>{{feedback.lastName}}</td>
+      <td>{{feedback.mobileNumber}}</td>
+
+      <td><button type="button" class="btn btn-light">update</button></td>
+      <td><button type="button" class="btn btn-light" routerLink="/Success" routerLinkActive="active" style="background-color: rgb(255, 67, 67);"> Delete</button></td>
+
+    </tr>
+  </tbody>
+  <br><br>
+<button  routerLink="/customer/add"  routerLinkActive="active" type="submit" class="main-btn"> add new customer </button>
+<br><br>
+</table>

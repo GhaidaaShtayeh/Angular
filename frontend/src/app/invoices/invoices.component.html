@@ -1,0 +1,48 @@
+
+<app-nav-bar></app-nav-bar>
+<section id="page-banner" class="pt-105 pb-110 bg_cover" data-overlay="8"style="background-image: url(https://www.customerthermometer.com/img/41-different-ways-to-get-customer-feedback-blog-header.png)" >
+  <br><br>
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-12">
+              <div class="page-banner-cont">
+                  <h2>Invoices</h2>
+                  <nav aria-label="breadcrumb">
+                      <ol class="breadcrumb">
+                          <li class="breadcrumb-item"><a href="home">Home</a></li>
+                          <li class="breadcrumb-item active" aria-current="page">invoices</li>
+                      </ol>
+                  </nav>
+              </div>  <!-- page banner cont -->
+          </div>
+      </div> <!-- row -->
+  </div> <!-- container -->
+  <br><br><br>
+</section>
+<br><br>
+<table>
+  <thead>
+    <tr>
+      <th>Serial Number</th>
+      <th>Status</th>
+      <th>created date</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody *ngFor="let invoice of inovoicesList">
+    <tr>
+      <td>{{invoice.serialNumber}}</td>
+      <td>{{invoice.unitPrice}}</td>
+      <td>{{invoice.createdDate | date:'medium' }}</td>
+
+      <td><button type="button" class="btn btn-light" [routerLink]="['/update-invoice',invoice.id]">update</button></td>
+      <td><button type="button" class="btn btn-light" routerLink="/Success" routerLinkActive="active" style="background-color: rgb(255, 67, 67);"> Delete</button></td>
+
+    </tr>
+  </tbody>
+  <br><br>
+  <button  routerLink="/invoices/add" type="submit" class="main-btn"> add new Invoice </button>
+<br><br>
+</table>
+

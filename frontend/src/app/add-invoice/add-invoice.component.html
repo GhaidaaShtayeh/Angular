@@ -1,0 +1,16 @@
+<app-nav-bar></app-nav-bar>
+
+<div class="addreq">
+  <form class="form" [formGroup]="addstudentform">
+    <h1 class ="header" > Add new invoice </h1>
+
+    <input formControlName="serialNumber" type="number" placeholder=" serialNumber "><br>
+    <input formControlName="status" type="text" placeholder=" status"><br>
+    <input formControlName="customerSerialNumber" type="text" placeholder="customer serial number"><br>
+    <input formControlName="employeeSerialNumber" type="text" placeholder="employee serial number"><br>
+
+    <button  (click)="onSave()" type="submit" class="main-btn"> Save</button>
+
+  </form>
+
+</div>
