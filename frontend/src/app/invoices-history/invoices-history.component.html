@@ -1,0 +1,44 @@
+<app-nav-bar></app-nav-bar>
+
+<section id="page-banner" class="pt-105 pb-110 bg_cover" data-overlay="8"style="background-image: url(https://previews.123rf.com/images/varijanta/varijanta1603/varijanta160300102/54405558-flat-line-design-website-banner-for-an-invoice-online-invoice-generator-invoice-software-invoice-tem.jpg)" >
+  <br><br>
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-12">
+              <div class="page-banner-cont">
+                  <h2>Invoices History</h2>
+                  <nav aria-label="breadcrumb">
+                      <ol class="breadcrumb">
+                          <li class="breadcrumb-item"><a href="home">Home</a></li>
+                          <li class="breadcrumb-item active" aria-current="page">History</li>
+                      </ol>
+                  </nav>
+              </div>  <!-- page banner cont -->
+          </div>
+      </div> <!-- row -->
+  </div> <!-- container -->
+  <br><br><br>
+</section>
+<br><br>
+<table>
+  <thead>
+    <tr>
+      <th>updated date</th>
+      <th>employee serial number</th>
+      <th>employee first name </th>
+      <th>employee last name</th>
+      <th>invoice update</th>
+    </tr>
+  </thead>
+  <tbody *ngFor="let invoice of inovoicesList">
+
+    <tr>
+      <td>{{invoice.updatedDate | date:'medium'}}</td>
+      <td>{{invoice.employee.serialNumber}}</td>
+      <td>{{invoice.employee.firstName}}</td>
+      <td>{{invoice.employee.lastName}}</td>
+      <td>{{invoice.invoiceHistory}}</td>
+    </tr>
+  </tbody>
+</table>
+
