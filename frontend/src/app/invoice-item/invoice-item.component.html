@@ -27,6 +27,7 @@
       <th>Quantity</th>
       <th>unit price </th>
       <th> Total </th>
+      <th></th>
 
     </tr>
   </thead>
@@ -37,6 +38,7 @@
       <td>{{invoice.quantity}}</td>
       <td>{{invoice.item.unitPrice}}</td>
       <td>{{invoice.item.unitPrice * invoice.quantity}}</td>
+      <td><button type="button" class="btn btn-light" [routerLink]="['/edit-quantity',invoice.id]">update</button></td>
 
     </tr>
   </tbody>

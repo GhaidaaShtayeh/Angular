@@ -21,6 +21,7 @@ import { AddItemComponent } from './add-item/add-item.component';
 import { InvoicesHistoryComponent } from './invoices-history/invoices-history.component';
 import { InvoiceItemComponent } from './invoice-item/invoice-item.component';
 import { AddInvoiceItemComponent } from './add-invoice-item/add-invoice-item.component';
+import { EditQuantityComponent } from './edit-quantity/edit-quantity.component';
 
 
 
@@ -40,7 +41,8 @@ import { AddInvoiceItemComponent } from './add-invoice-item/add-invoice-item.com
     AddItemComponent,
     InvoicesHistoryComponent,
     InvoiceItemComponent,
-    AddInvoiceItemComponent
+    AddInvoiceItemComponent,
+    EditQuantityComponent
   ],
   imports: [
     BrowserModule,

@@ -65,8 +65,9 @@ export class AuthService {
         this.router.navigate(['/dashboread']);
       }
       else{
-        this.router.navigate(['/login']);
 
+        this.router.navigate(['/login']);
+        
       }
     }
 

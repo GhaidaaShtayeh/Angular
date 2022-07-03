@@ -36,9 +36,7 @@ export class UpdateInvoiceComponent implements OnInit {
      this.editStudentform.get('serialNumber')?.setValue(this.invoice.serialNumber)
      this.editStudentform.get('status')?.setValue(this.invoice.status)
      this.editStudentform.get('employeeSerialNumber')?.setValue(this.invoice.employee.serialNumber)
-     this.editStudentform.get('customerSerialNumber')?.setValue(this.invoice.customer.serialNumber)
-
-
+     this.editStudentform.get('customerSerialNumber')?.setValue(this.invoice.customerSerialNumber)
 
    });
   }

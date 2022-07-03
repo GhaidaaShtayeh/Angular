@@ -16,6 +16,7 @@ import { AddCustomerComponent } from './add-customer/add-customer.component';
 import { AddInvoiceComponent } from './add-invoice/add-invoice.component';
 import { UpdateInvoiceComponent } from './update-invoice/update-invoice.component';
 import { InvoicesHistoryComponent } from './invoices-history/invoices-history.component';
+import { EditQuantityComponent } from './edit-quantity/edit-quantity.component';
 
 
 const routes: Routes = [
@@ -31,7 +32,8 @@ const routes: Routes = [
   {path:'item/add',component:AddItemComponent},
   {path:'invoicehistory/:id',component:InvoicesHistoryComponent},
   {path:'invoice-item/:id',component:InvoiceItemComponent},
-  {path:'add-invoice-item/:id',component:AddInvoiceItemComponent}
+  {path:'add-invoice-item/:id',component:AddInvoiceItemComponent},
+  {path:'edit-quantity/:id',component:EditQuantityComponent}
 
 ];
 
