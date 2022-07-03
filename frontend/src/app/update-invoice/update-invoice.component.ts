@@ -47,7 +47,7 @@ export class UpdateInvoiceComponent implements OnInit {
     let customerSerialNumber = this.editStudentform.get('customerSerialNumber')?.value;
     let employeeSerialNumber = this.editStudentform.get('employeeSerialNumber')?.value;
 
-    let url = "http://localhost:8085/invoice/update/"+this.id;
+    let url = "http://localhost:8085/invoice/update/"+this.invoice.id;
     let obj = {serialNumber:serialNumber , status:status , customerSerialNumber:customerSerialNumber,employeeSerialNumber:employeeSerialNumber}
     this._http.put(url,obj).subscribe(data=>{console.log(data)
     alert("row edited");

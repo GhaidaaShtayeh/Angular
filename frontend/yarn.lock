@@ -4596,6 +4596,11 @@
     "bootstrap-css-only" "^4.4.1"
     "tslib" "^2.0.0"
 
+"ng2-search-filter@^0.5.1":
+  "integrity" "sha512-noN8R+Gyxo5ZuboEOvq+u0zKio6pEf1IVYQTCZfAfXm6ONmzWu/M2xK0di9oVUprDbPBQXCGUuvD5i2GD+35HA=="
+  "resolved" "https://registry.npmjs.org/ng2-search-filter/-/ng2-search-filter-0.5.1.tgz"
+  "version" "0.5.1"
+
 "ngx-bootstrap@^8.0.0":
   "integrity" "sha512-UjJ/57Pr7ctdI2L113QX1IqJPYtOMrp5Qq/RLvUT1TOwPQWPi9LXTQ/7BtipkptQjer7Fk9yueITH3Y8vD+Dmg=="
   "resolved" "https://registry.npmjs.org/ngx-bootstrap/-/ngx-bootstrap-8.0.0.tgz"

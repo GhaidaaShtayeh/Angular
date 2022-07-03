@@ -20,6 +20,9 @@
   <br><br><br>
 </section>
 <br><br>
+<div class="search-hero">
+  <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="&#61442;  Start searching by id">
+</div>
 <table>
   <thead>
     <tr>
@@ -30,7 +33,7 @@
       <th></th>
     </tr>
   </thead>
-  <tbody *ngFor="let invoice of inovoicesList">
+  <tbody *ngFor="let invoice of inovoicesList | filter:searchText">
     <tr>
       <td>{{invoice.serialNumber}}</td>
       <td>{{invoice.createdDate | date:'medium' }}</td>

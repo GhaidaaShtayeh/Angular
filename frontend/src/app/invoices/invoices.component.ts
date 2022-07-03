@@ -11,6 +11,7 @@ import { DataTablesModule } from 'angular-datatables';
 export class InvoicesComponent implements OnInit {
 
   inovoicesList: Array<any> = [];
+  searchText: any;
   constructor(private _http: HttpClient) {}
 
   ngOnInit(): void {

@@ -1,3 +1,4 @@
+import { Observable } from 'rxjs';
 import { InvoiceService } from './../invoice.service';
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
@@ -16,6 +17,7 @@ export class HomeSuperuserComponent implements OnInit {
   private _http: any;
 
   constructor(private service:PostService,private http:HttpClient) {}
+  headers = new Headers().set('Content-Type','application/json');
 
   ngOnInit() {
     // to get the post for the first time we call the fuction from OnInit
@@ -30,9 +32,10 @@ export class HomeSuperuserComponent implements OnInit {
     });
   }
 
-  deleteinvoice(id: any) {
-    let url = "http://localhost:8085/invoices/deleteInvoice/"+id;
-    let body={id:id}
-     this.http.put(url,body).subscribe((body: any)=>{console.log(body)})
+  deleteinvoice(id: number)  {
+    const url = 'http://localhost:8085/invoice/deleteInvoice/14';
+    console.log(id);
+    console.log(url+id);
+    this.http.get<any>(url).subscribe(res=> {console.log(res)});
   }
 }

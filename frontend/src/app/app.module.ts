@@ -22,6 +22,7 @@ import { InvoicesHistoryComponent } from './invoices-history/invoices-history.co
 import { InvoiceItemComponent } from './invoice-item/invoice-item.component';
 import { AddInvoiceItemComponent } from './add-invoice-item/add-invoice-item.component';
 import { EditQuantityComponent } from './edit-quantity/edit-quantity.component';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 
 
@@ -60,7 +61,8 @@ import { EditQuantityComponent } from './edit-quantity/edit-quantity.component';
         allowedDomains: ['localhost:8085'],
         disallowedRoutes:['localhost:8085/login']
       }
-    })
+    }),
+    Ng2SearchPipeModule
 
     ],
   providers: [],
