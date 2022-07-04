@@ -17,6 +17,8 @@ import { AddInvoiceComponent } from './add-invoice/add-invoice.component';
 import { UpdateInvoiceComponent } from './update-invoice/update-invoice.component';
 import { InvoicesHistoryComponent } from './invoices-history/invoices-history.component';
 import { EditQuantityComponent } from './edit-quantity/edit-quantity.component';
+import { HomeAudtiorComponent } from './home-audtior/home-audtior.component';
+import { HomeUserComponent } from './home-user/home-user.component';
 
 
 const routes: Routes = [
@@ -33,7 +35,9 @@ const routes: Routes = [
   {path:'invoicehistory/:id',component:InvoicesHistoryComponent},
   {path:'invoice-item/:id',component:InvoiceItemComponent},
   {path:'add-invoice-item/:id',component:AddInvoiceItemComponent},
-  {path:'edit-quantity/:id',component:EditQuantityComponent}
+  {path:'edit-quantity/:id',component:EditQuantityComponent},
+  {path:'home/auditor',component:HomeAudtiorComponent},
+  {path:'home/user',component:HomeUserComponent}
 
 ];
 
@@ -43,4 +47,4 @@ const routes: Routes = [
 })
 export class AppRoutingModule { }
 
-export const routingcomponent = [RegisterComponent , LoginComponent ]
+//export const routingcomponent = [RegisterComponent , LoginComponent ]

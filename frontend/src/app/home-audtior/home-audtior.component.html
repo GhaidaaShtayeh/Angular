@@ -1,0 +1,44 @@
+<section id="page-banner" class="pt-105 pb-110 bg_cover" data-overlay="8"style="background-image: url(https://www.customerthermometer.com/img/41-different-ways-to-get-customer-feedback-blog-header.png)" >
+  <br><br>
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-12">
+              <div class="page-banner-cont">
+                  <h2>Invoices</h2>
+                  <nav aria-label="breadcrumb">
+                      <ol class="breadcrumb">
+                          <li class="breadcrumb-item"><a href="home">Home</a></li>
+                          <li class="breadcrumb-item active" aria-current="page">invoices</li>
+                      </ol>
+                  </nav>
+              </div>  <!-- page banner cont -->
+          </div>
+      </div> <!-- row -->
+  </div> <!-- container -->
+  <br><br><br>
+</section>
+<br><br>
+<div class="search-hero">
+  <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="&#61442;  Start searching by id">
+</div>
+<table>
+  <thead>
+    <tr>
+      <th>Serial Number</th>
+      <th>created date</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody *ngFor="let invoice of inovoicesList | filter:searchText">
+    <tr>
+      <td>{{invoice.serialNumber}}</td>
+      <td>{{invoice.createdDate | date:'medium' }}</td>
+
+    </tr>
+  </tbody>
+  <br><br>
+  <br><br>
+</table>
+

@@ -26,22 +26,13 @@ ngOnInit(): void { }
 
 onSave(): void {
 
-    let serialNumber = this.addstudentform.get('serialNumber')?.value;
-    let status = this.addstudentform.get('status')?.value;
-    let customerSerialNumber =this.addstudentform.get('customerSerialNumber')?.value;
-    let employeeSerialNumber = this.addstudentform.get('employeeSerialNumber')?.value;
-
-
-    let body = {
-      serialNumber: serialNumber,
-      status: status,
-      customerSerialNumber: customerSerialNumber,
-      employeeSerialNumber: employeeSerialNumber
-    }
-    console.warn(body);
-
-    this._http.post("http://localhost:8085/invoice/save", body).subscribe()
-
+  var formData:any = new FormData();
+  formData.append("serialNumber",this.addstudentform.get('serialNumber')?.value);
+  formData.append("status",this.addstudentform.get('status')?.value);
+  formData.append("customerSerialNumber",this.addstudentform.get('customerSerialNumber')?.value);
+  formData.append("employeeSerialNumber",this.addstudentform.get('employeeSerialNumber')?.value);
+  formData.append("photo",this.addstudentform.get('photo')?.value);
+  this._http.post("http://localhost:8085/invoice/save", formData).subscribe()
 
 }
 

@@ -64,10 +64,15 @@ export class AuthService {
       if(this.tokenInfo.role === "SUPER_USER"){
         this.router.navigate(['/dashboread']);
       }
-      else{
+      else if(this.tokenInfo.role === "AUDITOR"){
 
-        this.router.navigate(['/login']);
-        
+        this.router.navigate(['/home/auditor']);
+
+      }
+      else if(this.tokenInfo.role === "USER"){
+
+        this.router.navigate(['/home/user']);
+
       }
     }
 
