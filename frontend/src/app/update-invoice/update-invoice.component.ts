@@ -3,6 +3,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { AnyCatcher } from 'rxjs/internal/AnyCatcher';
+import { DomSanitizer} from '@angular/platform-browser';
+
 
 @Component({
   selector: 'app-update-invoice',
@@ -22,7 +24,8 @@ export class UpdateInvoiceComponent implements OnInit {
   id :number = -1;
   constructor(private _formbuilder: FormBuilder,
     private _http: HttpClient,
-    private route:ActivatedRoute
+    private route:ActivatedRoute,
+    private sanitizer:DomSanitizer
     ) { }
 
     invoice : any;
@@ -37,6 +40,8 @@ export class UpdateInvoiceComponent implements OnInit {
      this.editStudentform.get('status')?.setValue(this.invoice.status)
      this.editStudentform.get('employeeSerialNumber')?.setValue(this.invoice.employee.serialNumber)
      this.editStudentform.get('customerSerialNumber')?.setValue(this.invoice.customerSerialNumber)
+    console.log(this.invoice)
+    this.sanitizer.bypassSecurityTrustResourceUrl(`${JSON.parse(this.invoice.photo)}`);
 
    });
   }

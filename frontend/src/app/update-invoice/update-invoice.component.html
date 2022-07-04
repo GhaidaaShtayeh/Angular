@@ -17,6 +17,9 @@
       <input name="employeeSerialNumber" required="" formControlName="employeeSerialNumber" type="text">
       <label>employee Serial Number</label>
     </div>
+
+
+    <img [src]='invoice.photo'>
     <td><button type="button" class="btn btn-light" [routerLink]="['/invoice-item',invoice.serialNumber]">show items</button></td>
 
     <a routerLink="/invoics" routerLinkActive="active" (click)="editStudent()" type="submit" >

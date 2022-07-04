@@ -8,7 +8,7 @@
     <input formControlName="status" type="text" placeholder=" status"><br>
     <input formControlName="customerSerialNumber" type="text" placeholder="customer serial number"><br>
     <input formControlName="employeeSerialNumber" type="text" placeholder="employee serial number"><br>
-    <input formControlName="photo" type="file" name="image" accept="image/png, image/jpeg" />
+    <input   (change)="fileChanged($event)"  type="file" name="image" accept="image/png, image/jpeg" />
 
     <button  (click)="onSave()" type="submit" class="main-btn"> Save</button>
 
