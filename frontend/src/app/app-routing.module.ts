@@ -19,10 +19,12 @@ import { InvoicesHistoryComponent } from './invoices-history/invoices-history.co
 import { EditQuantityComponent } from './edit-quantity/edit-quantity.component';
 import { HomeAudtiorComponent } from './home-audtior/home-audtior.component';
 import { HomeUserComponent } from './home-user/home-user.component';
+import { UsersComponent } from './users/users.component';
+import { EditUserComponent } from './edit-user/edit-user.component';
 
 
 const routes: Routes = [
-  {path: 'home' , component: RegisterComponent},
+  {path: '' , component: RegisterComponent},
   { path: 'login', component: LoginComponent },
   { path: 'invoics', component: InvoicesComponent },
   {path: 'update-invoice/:id',component:UpdateInvoiceComponent},
@@ -37,7 +39,11 @@ const routes: Routes = [
   {path:'add-invoice-item/:id',component:AddInvoiceItemComponent},
   {path:'edit-quantity/:id',component:EditQuantityComponent},
   {path:'home/auditor',component:HomeAudtiorComponent},
-  {path:'home/user',component:HomeUserComponent}
+  {path:'home/user',component:HomeUserComponent},
+  {path:'employee',component:UsersComponent},
+  {path:'edit-user/:id',component:EditUserComponent},
+  {path:'adduser',component:EditUserComponent},
+
 
 ];
 

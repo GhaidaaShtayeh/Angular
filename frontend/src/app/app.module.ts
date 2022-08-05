@@ -25,6 +25,9 @@ import { EditQuantityComponent } from './edit-quantity/edit-quantity.component';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { HomeAudtiorComponent } from './home-audtior/home-audtior.component';
 import { HomeUserComponent } from './home-user/home-user.component';
+import { UsersComponent } from './users/users.component';
+import { EditUserComponent } from './edit-user/edit-user.component';
+import { AddUserComponent } from './add-user/add-user.component';
 
 
 
@@ -47,7 +50,10 @@ import { HomeUserComponent } from './home-user/home-user.component';
     AddInvoiceItemComponent,
     EditQuantityComponent,
     HomeAudtiorComponent,
-    HomeUserComponent
+    HomeUserComponent,
+    UsersComponent,
+    EditUserComponent,
+    AddUserComponent
   ],
   imports: [
     BrowserModule,
