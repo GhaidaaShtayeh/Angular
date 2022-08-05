@@ -1,0 +1,64 @@
+<div class="login-box">
+  <h2>Edit Employee</h2>
+  <form class="form" [formGroup]="editStudentform">
+
+
+    <div class="main-form pt-45">
+          <div class="row">
+              <div class="col-md-6">
+                  <div class="singel-form form-group">
+                    <label>firstName : </label>
+                      <input formControlName="firstName" type="text" name="firstName" type="text" placeholder="Your First Name" required="required">
+                  </div>
+              </div>
+              <div class="col-md-6">
+                  <div class="singel-form form-group">
+                    <label>lastName : </label>
+                      <input formControlName="lastName"  type="text" name="lastName" type="text" placeholder="Your last Name" required="required">
+                  </div>
+              </div>
+              <div class="col-md-12">
+                  <div class="singel-form form-group ">
+                    <label>serialNumber : </label>
+                      <input formControlName="serialNumber" type="number" name="serialNumber"  placeholder="Your serial Number"  required="required">
+                  </div>
+              </div>
+
+              <div class="col-md-12">
+                <div class="singel-form form-group ">
+                  <label>email : </label>
+                    <input formControlName="email" type="text" name="email"  placeholder="Your email"  required="required">
+                </div>
+              </div>
+                <div class="col-md-12">
+                  <div class="singel-form form-group ">
+                    <label>mobileNumber : </label>
+                      <input formControlName="mobileNumber" type="text" name="mobileNumber"  placeholder="Your mobileNumber"  required="required">
+                  </div>
+            </div>
+            <div class="col-md-12">
+              <div class="singel-form form-group ">
+                <label>country : </label>
+                  <input formControlName="country" type="text" name="country"  placeholder="Your country"  required="required">
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div class="singel-form form-group ">
+                  <input [max]= 3 title="Error Message" pattern="[1-3]{1}[0-3]{3}" formControlName="roleId" type="number" name="roleId"  placeholder="Your role Id"  required="required"> 1 : Super User 2 : User 3 : Auditor
+              </div>
+          </div>
+
+
+            </div>
+            <br><br>
+    <a routerLink="/employee" routerLinkActive="active" (click)="editStudent()" type="submit" >
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      Edit
+    </a>
+          </div>
+  </form>
+</div>
+

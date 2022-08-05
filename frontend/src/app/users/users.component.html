@@ -1,0 +1,53 @@
+
+<app-nav-bar></app-nav-bar>
+<section id="page-banner" class="pt-105 pb-110 bg_cover" data-overlay="8"style="background-image: url(https://prolificanalyticsinc.com/static/img/employee-bg.jpg)" >
+  <br><br>
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-12">
+              <div class="page-banner-cont">
+                  <h2>Employees</h2>
+                  <nav aria-label="breadcrumb">
+                      <ol class="breadcrumb">
+                          <li class="breadcrumb-item"><a href="home">Home</a></li>
+                          <li class="breadcrumb-item active" aria-current="page">employees</li>
+                      </ol>
+                  </nav>
+              </div>  <!-- page banner cont -->
+          </div>
+      </div> <!-- row -->
+  </div> <!-- container -->
+  <br><br><br>
+</section>
+<br><br>
+<div class="search-hero">
+  <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="&#61442;  Start searching by id">
+</div>
+<table>
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Serial Number</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Mobile Number</th>
+      <th></th>
+
+    </tr>
+  </thead>
+  <tbody *ngFor="let invoice of inovoicesList | filter:searchText">
+    <tr>
+      <td>{{invoice.id}}</td>
+      <td>{{invoice.serialNumber }}</td>
+      <td>{{invoice.firstName }}</td>
+      <td>{{invoice.lastName }}</td>
+      <td>{{invoice.mobileNumber}}</td>
+
+      <td><button type="button" class="btn btn-light" [routerLink]="['/edit-user',invoice.id]">update</button></td>
+
+    </tr>
+  </tbody>
+  <br><br>
+  <button  routerLink="/invoices/add" type="submit" class="main-btn"> add new user </button>
+<br><br>
+</table>
