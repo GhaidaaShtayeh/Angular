@@ -19,7 +19,7 @@
     </div>
 
 
-    <img [src]='invoice.photo'>
+    <img style="height: 100px;" src="{{'data:image/jpg;base64,' + invoice.photo}}">
     <td><button type="button" class="btn btn-light" [routerLink]="['/invoice-item',invoice.serialNumber]">show items</button></td>
 
     <a routerLink="/invoics" routerLinkActive="active" (click)="editStudent()" type="submit" >

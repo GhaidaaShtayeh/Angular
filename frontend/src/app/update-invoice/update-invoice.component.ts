@@ -41,7 +41,9 @@ export class UpdateInvoiceComponent implements OnInit {
      this.editStudentform.get('employeeSerialNumber')?.setValue(this.invoice.employee.serialNumber)
      this.editStudentform.get('customerSerialNumber')?.setValue(this.invoice.customerSerialNumber)
     console.log(this.invoice)
-    this.sanitizer.bypassSecurityTrustResourceUrl(`${JSON.parse(this.invoice.photo)}`);
+    this.sanitizer.bypassSecurityTrustResourceUrl('data:image/jpg;base64,'
+                 + this.invoice.photo);
+   // this.sanitizer.bypassSecurityTrustResourceUrl(`${JSON.parse(this.invoice.photo)}`);
 
    });
   }

@@ -36,6 +36,8 @@
       <td>{{invoice.serialNumber}}</td>
       <td>{{invoice.createdDate | date:'medium' }}</td>
 
+      <a [routerLink]="['/invoicehistory',invoice.serialNumber]"  style="color:gray;"> History</a>
+
     </tr>
   </tbody>
   <br><br>

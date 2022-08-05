@@ -42,8 +42,7 @@
       <td>{{invoice.firstName }}</td>
       <td>{{invoice.lastName }}</td>
       <td>{{invoice.mobileNumber}}</td>
-
-      <td><button type="button" class="btn btn-light" [routerLink]="['/edit-user',invoice.id]">update</button></td>
+      <a class="btn text-warning "[routerLink]="['/edit-user',invoice.id]"><i class="fa fa-pencil"></i> Edit</a>
 
     </tr>
   </tbody>
