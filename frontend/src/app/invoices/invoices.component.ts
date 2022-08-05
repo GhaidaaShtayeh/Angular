@@ -21,6 +21,13 @@ export class InvoicesComponent implements OnInit {
         this.inovoicesList = response;
       });
   }
+  deleteinvoice(id: number)  {
+    const url = 'http://localhost:8085/invoice/deleteInvoice/'+id;
+    console.log(id);
+    console.log(url+id);
+    this._http.get<any>(url).subscribe(res=> {console.log(res)});
+    location.reload();
 
+  }
 
 }

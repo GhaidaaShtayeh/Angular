@@ -1,3 +1,4 @@
+import { EditCustomerComponent } from './edit-customer/edit-customer.component';
 import { AddInvoiceItemComponent } from './add-invoice-item/add-invoice-item.component';
 import { InvoiceItemComponent } from './invoice-item/invoice-item.component';
 import { AddItemComponent } from './add-item/add-item.component';
@@ -43,6 +44,7 @@ const routes: Routes = [
   {path:'employee',component:UsersComponent},
   {path:'edit-user/:id',component:EditUserComponent},
   {path:'adduser',component:EditUserComponent},
+  {path:'customer/edit/:id',component:EditCustomerComponent},
 
 
 ];

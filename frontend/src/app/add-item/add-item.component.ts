@@ -34,7 +34,7 @@ onSave(): void {
     let body = {
       serialNumber: serialNumber,
       name: name,
-      lastName: unitPrice,
+      unitPrice: unitPrice,
 
     }
     console.warn(body);

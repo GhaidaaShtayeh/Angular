@@ -41,8 +41,8 @@
       <td>{{feedback.lastName}}</td>
       <td>{{feedback.mobileNumber}}</td>
 
-      <a class="btn text-warning" ><i class="fa fa-pencil"></i> Edit</a>
-      <a class="btn text-danger" routerLink="/Success"><i class="fa fa-trash-o"></i> Delete</a>
+      <a class="btn text-warning" [routerLink]="['/customer/edit',feedback.id]" > Edit</a>
+      <a class="btn text-danger" (click)="deleteinvoice(feedback.id)"><i class="fa fa-trash-o"></i> Delete</a>
     </tr>
   </tbody>
   <br><br>

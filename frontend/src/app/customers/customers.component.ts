@@ -19,4 +19,13 @@ export class CustomersComponent implements OnInit {
       });
   }
 
+  deleteinvoice(id: number)  {
+    const url = 'http://localhost:8085/customer/deleteCustomer/'+id;
+    console.log(id);
+    console.log(url+id);
+    this._http.get<any>(url).subscribe(res=> {console.log(res)});
+    location.reload();
+
+  }
+
 }

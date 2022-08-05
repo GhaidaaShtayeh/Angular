@@ -24,7 +24,7 @@
     <tr>
       <th>Serial Number</th>
       <th>Status</th>
-      <th>created date</th>
+      <th>unit price</th>
       <th></th>
     </tr>
   </thead>
@@ -36,7 +36,7 @@
 
       <td data-title="Options">
         <a class="btn text-warning "[routerLink]="['/update-invoice',item.id]"><i class="fa fa-pencil"></i> Edit</a>
-        <a class="btn text-danger" routerLink="/Success"><i class="fa fa-trash-o"></i> Delete</a>
+        <a class="btn text-danger" (click)="deleteitem(item.serialNumber)"> Delete</a>
       </td>
     </tr>
   </tbody>

@@ -55,9 +55,10 @@ export class EditUserComponent implements OnInit {
     let country = this.editStudentform.get('country')?.value;
     let email = this.editStudentform.get('email')?.value;
     let roleId = this.editStudentform.get('roleId')?.value;
-    let url = "http://localhost:8085/invoice/update/"+this.id;
-    let obj = {serialNumber:serialNumber , firstName:firstName , lastName:lastName, mobileNumber:mobileNumber, country:country, email:email, roleId:roleId}
-    this._http.put(url,obj).subscribe(data=>{console.log(data)
+
+    let url = "http://localhost:8085/employee/update/"+this.invoice.id;
+    let obj = {firstName:firstName ,lastName:lastName, serialNumber:serialNumber ,  mobileNumber:mobileNumber, country:country, email:email, roleId:roleId}
+    this._http.put(url,obj).subscribe(obj=>{console.log(obj)
     alert("row edited");
     })
 

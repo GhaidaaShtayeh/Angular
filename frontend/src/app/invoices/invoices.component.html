@@ -35,10 +35,9 @@
     <tr>
       <td>{{invoice.serialNumber}}</td>
       <td>{{invoice.createdDate | date:'medium' }}</td>
-
-
+      
         <a class="btn text-warning"[routerLink]="['/update-invoice',invoice.serialNumber]" ><i class="fa fa-pencil"></i> Edit</a>
-        <a class="btn text-danger" routerLink="/Success"><i class="fa fa-trash-o"></i> Delete</a>
+        <a class="btn text-danger" (click)="deleteinvoice(invoice.id)">Delete</a>
         <a [routerLink]="['/invoicehistory',invoice.serialNumber]"  style="color:gray;"> History</a>
     </tr>
   </tbody>
