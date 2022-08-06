@@ -1,0 +1,142 @@
+.section-title h5{
+  color: #07294d;
+  position: relative;
+  padding-bottom: 12px;
+  font-weight: 400;
+}
+.section-title h5::before{
+  content: '';
+  position: absolute;
+  width: 35px;
+  height: 2px;
+  background-color: #ffc600;
+  bottom: 0;
+  left: 0;
+  font-weight: 400;
+}
+
+/*=====================================================
+  21. ABOUT PAGE css
+======================================================*/
+
+.about-image img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.about-singel-items span{
+  font-size: 60px;
+  color: #dbdbdb;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  line-height: 46px;
+  padding-bottom: 22px;
+}
+.about-singel-items h4{
+  color: #000;
+  font-size: 24px;
+  padding-bottom: 25px;
+}
+
+
+.bg_cover{
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 200%;
+  background-size: 100%;
+}
+
+[data-overlay] {
+position: relative;
+}
+
+[data-overlay]::before {
+background: #07294d;
+content: "";
+height: 100%;
+left: 0;
+position: absolute;
+top: 0;
+width: 100%;
+z-index: 1;
+}
+
+[data-overlay="8"]::before {
+opacity: 0.8;
+}
+
+/* Background Color */
+
+.gray-bg {
+background: #edf0f2;
+}
+
+#register-form input,.form button{
+    width : 100%;
+    border-radius: 6px;
+    margin-top: 5px;
+    height:50px;
+    padding:10px 0x;
+    margin:10px;
+
+
+}
+/* .register-from{
+  top: 5px;
+  left: 200px;
+  right:0;
+  padding: 70px;
+  position:absolute;
+}*/
+
+.header{
+width : 60%;
+border-radius: 6px;
+border: 1px solid black;
+padding:10px 30px 10px 30px;
+text-align: center;
+background-color: #ffc600;
+font-family: Tahoma, Verdana, sans-serif;
+ }
+
+
+
+.main-btn {
+display:block;
+font-weight: 500;
+border: 1px solid #ffc600;
+padding: 0 35px;
+font-size: 20px;
+font-family: 'Montserrat', sans-serif;
+font-weight: 700;
+line-height: 50px;
+border-radius: 5px;
+color: #07294d;
+z-index: 5;
+background-color: #ffc600;
+
+}
+.main-btn:hover{
+  color: #ffc600;
+  border-color: #07294d;
+  background-color: #07294d;
+}
+
+input[type=radio] {
+  transform: scale(.5);
+}
+
+
+.register-from a{
+  display:block;
+  font-weight: 500;
+  margin-left :100px;
+
+}
+ #test1{
+  flex-direction: column;
+  margin: 15px 0;
+  align-items: flex-start;
+ }

@@ -1,6 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { DataTablesModule } from 'angular-datatables';
+import { HttpHeaders } from '@angular/common/http';
+
 
 
 @Component({
@@ -8,6 +10,7 @@ import { DataTablesModule } from 'angular-datatables';
   templateUrl: './invoices.component.html',
   styleUrls: ['./invoices.component.css']
 })
+
 export class InvoicesComponent implements OnInit {
 
   inovoicesList: Array<any> = [];
@@ -15,8 +18,13 @@ export class InvoicesComponent implements OnInit {
   constructor(private _http: HttpClient) {}
 
   ngOnInit(): void {
+    let headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Authorization': 'Bearer '+ localStorage.getItem("access_token")!
+    });
+
     this._http
-      .get('http://localhost:8085/invoice/viewList')
+      .get('http://localhost:8085/invoice/getInvoices',{headers:headers})
       .subscribe((response: any) => {
         this.inovoicesList = response;
       });

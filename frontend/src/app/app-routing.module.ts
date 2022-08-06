@@ -22,6 +22,7 @@ import { HomeAudtiorComponent } from './home-audtior/home-audtior.component';
 import { HomeUserComponent } from './home-user/home-user.component';
 import { UsersComponent } from './users/users.component';
 import { EditUserComponent } from './edit-user/edit-user.component';
+import { AddUserComponent } from './add-user/add-user.component';
 
 
 const routes: Routes = [
@@ -43,7 +44,7 @@ const routes: Routes = [
   {path:'home/user',component:HomeUserComponent},
   {path:'employee',component:UsersComponent},
   {path:'edit-user/:id',component:EditUserComponent},
-  {path:'adduser',component:EditUserComponent},
+  {path:'add-user',component:AddUserComponent},
   {path:'customer/edit/:id',component:EditCustomerComponent},
 
 

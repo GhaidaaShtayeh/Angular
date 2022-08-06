@@ -21,7 +21,7 @@
 </section>
 <br><br>
 <div class="search-hero">
-  <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="&#61442;  Start searching by id">
+  <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="&#61442;  Start searching">
 </div>
 <table>
   <thead>
@@ -35,7 +35,7 @@
     <tr>
       <td>{{invoice.serialNumber}}</td>
       <td>{{invoice.createdDate | date:'medium' }}</td>
-      
+
         <a class="btn text-warning"[routerLink]="['/update-invoice',invoice.serialNumber]" ><i class="fa fa-pencil"></i> Edit</a>
         <a class="btn text-danger" (click)="deleteinvoice(invoice.id)">Delete</a>
         <a [routerLink]="['/invoicehistory',invoice.serialNumber]"  style="color:gray;"> History</a>
