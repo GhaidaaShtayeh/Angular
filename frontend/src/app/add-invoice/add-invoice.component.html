@@ -10,7 +10,7 @@
     <input formControlName="employeeSerialNumber" type="text" placeholder="employee serial number"><br>
     <input   (change)="fileChanged($event)"  type="file" name="image" accept="image/png, image/jpeg" />
 
-    <button  (click)="onSave()" type="submit" class="main-btn"> Save</button>
+    <button routerLink="/invoics" routerLinkActive="active" (click)="onSave()" type="submit" class="main-btn"> Save</button>
 
   </form>
 
