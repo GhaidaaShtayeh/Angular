@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { DataTablesModule } from 'angular-datatables';
 import { HttpHeaders } from '@angular/common/http';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 
 
@@ -15,7 +16,11 @@ export class InvoicesComponent implements OnInit {
 
   inovoicesList: Array<any> = [];
   searchText: any;
-  constructor(private _http: HttpClient) {}
+  constructor(private _http: HttpClient,private _formbuilder: FormBuilder) {}
+
+  addstudentform: FormGroup = this._formbuilder.group({
+    search: ['', Validators.required]
+});
 
   ngOnInit(): void {
     let headers = new HttpHeaders({
@@ -35,7 +40,15 @@ export class InvoicesComponent implements OnInit {
     console.log(url+id);
     this._http.get<any>(url).subscribe(res=> {console.log(res)});
     location.reload();
-
   }
+ /* onSearch(): void {
+    let search = this.addstudentform.get('search')?.value;
+    let body = {
+      search : search
+    }
+    console.warn(body);
+
+    this._http.get("http://localhost:8085/item/save", body).subscribe()
+  }*/
 
 }
