@@ -9,6 +9,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class AddItemComponent implements OnInit {
 
+  itemsList: Array<any> = [];
 
   addstudentform: FormGroup = this._formbuilder.group({
     serialNumber: ['', Validators.required],
@@ -21,7 +22,14 @@ constructor(private _formbuilder: FormBuilder,
     private _http: HttpClient
 ) { }
 
-ngOnInit(): void { }
+ngOnInit(): void {
+    this._http
+      .get('http://localhost:8085/item/viewList')
+      .subscribe((response: any) => {
+        this.itemsList = response;
+      });
+
+}
 
 onSave(): void {
 

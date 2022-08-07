@@ -1,13 +1,24 @@
 <app-nav-bar></app-nav-bar>
 <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-
+<section id="page-banner" class="pt-105 pb-110 bg_cover" data-overlay="8"style="background-image: url(https://thumbs.dreamstime.com/b/dashboard-word-illustration-lettering-icons-web-banner-flyer-landing-page-presentation-book-cover-article-etc-198294470.jpg)" >
+  <br><br>
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-12">
+              <div class="page-banner-cont">
+                  <h2>Invoices Dashboread</h2>
+              </div>  <!-- page banner cont -->
+          </div>
+      </div> <!-- row -->
+  </div> <!-- container -->
+  <br><br><br>
+</section>
 
 <br><br>
 <table>
 <thead>
 <tr>
   <th>Serial Number</th>
-  <th>Status</th>
   <th>created date</th>
   <th></th>
   <th></th>
@@ -17,18 +28,18 @@
 <tbody>
 <tr  *ngFor="let post of posts| paginate: { itemsPerPage: 4, currentPage: p }">
   <td>{{post.serialNumber}}</td>
-  <td>{{post.status}}</td>
   <td>
     {{ post.createdDate | date:'medium' }}
   </td>
 
   <a class="btn text-warning" [routerLink]="['/update-invoice',post.serialNumber]" ><i class="fa fa-pencil"></i> Edit</a>
         <a class="btn text-danger" (click)="deleteinvoice(post.id)"><i class="fa fa-trash-o"></i> Delete</a>
-        <a [routerLink]="['/invoicehistory',post.serialNumber]"  style="color:gray;"> History</a>
+        <a [routerLink]="['/invoicehistory',post.serialNumber]"  style="color:gray;"><i class="fa fa-history" aria-hidden="true"></i>
+          History</a>
 
 </tr>
 </tbody>
-<pagination-controls (pageChange)="getPosts((p = $event))"></pagination-controls>
+<pagination-controls (pageChange)="getPosts((p = $event))" ></pagination-controls>
 <br><br>
 <button  routerLink="/invoices/add" type="submit" class="main-btn"> add new Invoice </button>
 <br><br>

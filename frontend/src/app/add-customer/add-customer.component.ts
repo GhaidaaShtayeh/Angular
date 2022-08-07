@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import jwt_decode from 'jwt-decode';
 
 @Component({
   selector: 'app-add-customer',
@@ -8,7 +9,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./add-customer.component.css']
 })
 export class AddCustomerComponent implements OnInit {
-
+  tokenInfo : any;
+  
   addstudentform: FormGroup = this._formbuilder.group({
     serialNumber: ['', Validators.required],
     firstName: ['', Validators.required],
@@ -22,7 +24,10 @@ constructor(private _formbuilder: FormBuilder,
     private _http: HttpClient
 ) { }
 
-ngOnInit(): void { }
+ngOnInit(): void {
+  this.tokenInfo = jwt_decode(localStorage.getItem("access_token")!);
+
+ }
 
 onSave(): void {
 

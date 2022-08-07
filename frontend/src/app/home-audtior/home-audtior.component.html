@@ -5,12 +5,7 @@
           <div class="col-lg-12">
               <div class="page-banner-cont">
                   <h2>Invoices</h2>
-                  <nav aria-label="breadcrumb">
-                      <ol class="breadcrumb">
-                          <li class="breadcrumb-item"><a href="home">Home</a></li>
-                          <li class="breadcrumb-item active" aria-current="page">invoices</li>
-                      </ol>
-                  </nav>
+
               </div>  <!-- page banner cont -->
           </div>
       </div> <!-- row -->
@@ -36,7 +31,8 @@
       <td>{{invoice.serialNumber}}</td>
       <td>{{invoice.createdDate | date:'medium' }}</td>
 
-      <a [routerLink]="['/invoicehistory',invoice.serialNumber]"  style="color:gray;"> History</a>
+      <a [routerLink]="['/invoicehistory',invoice.serialNumber]"  style="color:gray;"> <i class="fa fa-history" aria-hidden="true"></i>
+        History</a>
 
     </tr>
   </tbody>

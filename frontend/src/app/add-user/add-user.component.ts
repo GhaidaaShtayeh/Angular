@@ -30,17 +30,17 @@ export class AddUserComponent implements OnInit {
     let firstName = this.RegisterForm.get('firstName')?.value
     let lastName = this.RegisterForm.get('lastName')?.value
     let serialNumber = this.RegisterForm.get('serialNumber')?.value
-    let roleId = this.RegisterForm.get('roleId')?.value
+    let value = (<HTMLSelectElement>document.getElementById('select')).value;
     let email = this.RegisterForm.get('email')?.value
     let mobileNumber = this.RegisterForm.get('mobileNumber')?.value
-    let country = this.RegisterForm.get('country')?.value
+    let country = "Palestine"
     let password = this.RegisterForm.get('password')?.value
 
     let body = {
       firstName: firstName,
       lastName : lastName ,
       serialNumber : serialNumber,
-      roleId : roleId,
+      roleId : value,
       email:email,
       mobileNumber:mobileNumber,
       country : country,

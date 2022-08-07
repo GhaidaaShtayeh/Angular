@@ -26,11 +26,12 @@
                                   </div>
                               </div>
 
-                              <div class="col-md-12">
-                                <div class="singel-form form-group ">
-                                    <input [max]= 3 title="Error Message" pattern="[1-3]{1}[0-3]{3}" formControlName="roleId" type="number" name="roleId"  placeholder="Your role Id"  required="required"> 1 : Super User 2 : User 3 : Auditor
-                                </div>
-                            </div>
+                                <select id = "select" style="margin-left: 30px; margin-bottom:20px; width: 2000px;"  >
+                                  <option>Select a role</option>
+                                  <option value= 2 >user</option>
+                                  <option value= 3 >super user</option>
+                                  <option value= 14 >auditor</option>
+                                </select>
 
                               <div class="col-md-12">
                                 <div class="singel-form form-group ">
@@ -42,11 +43,10 @@
                                       <input formControlName="mobileNumber" type="text" name="mobileNumber"  placeholder="Your mobileNumber"  required="required">
                                   </div>
                             </div>
-                            <div class="col-md-12">
-                              <div class="singel-form form-group ">
-                                  <input formControlName="country" type="text" name="country"  placeholder="Your country"  required="required">
-                              </div>
-                            </div>
+                            <select id = "select" style="margin-left: 30px; margin-bottom:20px; width: 2000px; ">
+                              <option>Select a country</option>
+                              <option  >Palestine</option>
+                            </select>
                             <div class="col-md-12">
                               <div class="singel-form form-group ">
                                   <input formControlName="password" type="password" name="password"  placeholder="Your password"  required="required">
