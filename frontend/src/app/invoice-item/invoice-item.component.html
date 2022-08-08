@@ -4,7 +4,7 @@
       <div class="row">
           <div class="col-lg-12">
               <div class="page-banner-cont">
-                  <h2>Invoices Item</h2>
+                  <h2>Items</h2>
                   <nav aria-label="breadcrumb">
                       <ol class="breadcrumb">
                           <li class="breadcrumb-item"><a href="home">Home</a></li>
@@ -42,6 +42,8 @@
     </tr>
   </tbody>
   <br><br>
+  <span class="label success">Total = {{total}}</span>
+
   <button  [routerLink]="['/add-invoice-item', id]" class="main-btn"> add new item </button>
 </table>
 
