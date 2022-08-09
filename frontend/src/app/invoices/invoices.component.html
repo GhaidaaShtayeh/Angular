@@ -20,12 +20,19 @@
   <br><br><br>
 </section>
 <br><br>
-<div class="search-hero">
-  <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="&#61442;  Start searching by id">
+<div class="wrap">
+  <br><br>
+  <div class="search">
+     <input id = "input_search" type="text" class="searchTerm" placeholder="Search Invoice by Serial Number" style="height: 37px;">
+     <button type="submit" class="searchButton" (click)="serach()">
+       <i class="fa fa-search"></i>
+    </button>
+  </div>
+  <br><br>
 </div>
 <table>
   <thead>
-    <tr>
+    <tr >
       <th>Serial Number</th>
       <th>created date</th>
       <th></th>

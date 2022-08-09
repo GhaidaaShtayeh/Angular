@@ -12,7 +12,6 @@ import { PostService } from '../_services/post.service';
 })
 export class HomeSuperuserComponent implements OnInit {
   posts:any;
-  //if it doesn't work try it with 1
   p: number = 0;
   private _http: any;
 
