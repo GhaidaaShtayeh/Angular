@@ -36,7 +36,7 @@ export class HomeUserComponent implements OnInit {
     console.log(id);
     console.log(url+id);
     this._http.get<any>(url).subscribe(res=> {console.log(res)});
-    location.reload();
+  //  location.reload();
   }
 
 }
