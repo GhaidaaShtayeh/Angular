@@ -10,7 +10,7 @@ import jwt_decode from 'jwt-decode';
 })
 export class AddCustomerComponent implements OnInit {
   tokenInfo : any;
-  
+
   addstudentform: FormGroup = this._formbuilder.group({
     serialNumber: ['', Validators.required],
     firstName: ['', Validators.required],
@@ -48,7 +48,11 @@ onSave(): void {
     }
     console.warn(body);
 
-    this._http.post("http://localhost:8085/customer/save", body).subscribe()
+    this._http.post("http://localhost:8085/customer/save", body).subscribe(x => {console.log(x)
+    alert("added");
+    location.reload();
+
+   })
 
 
 }

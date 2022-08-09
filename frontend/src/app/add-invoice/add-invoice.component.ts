@@ -85,7 +85,10 @@ onSave(): void {
   formData.append('photo', this.base64textString);
   console.log(formData.getAll("photo"));*/
 
-  this._http.post("http://localhost:8085/invoice/save", body).subscribe()
+  this._http.post("http://localhost:8085/invoice/save", body).subscribe(x=>{console.log(x)
+  alert("added");
+  location.reload();
+ })
 
 }
 

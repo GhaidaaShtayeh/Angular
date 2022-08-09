@@ -34,7 +34,6 @@
   </td>
 
   <a class="btn text-warning" [routerLink]="['/update-invoice',post.serialNumber]" ><i class="fa fa-pencil"></i> Edit</a>
-        <a class="btn text-danger" (click)="deleteinvoice(post.id)"><i class="fa fa-trash-o"></i> Delete</a>
         <a [routerLink]="['/invoicehistory',post.serialNumber]"  style="color:gray;"><i class="fa fa-history" aria-hidden="true"></i>
           History</a>
 

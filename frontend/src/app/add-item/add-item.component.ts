@@ -47,7 +47,13 @@ onSave(): void {
     }
     console.warn(body);
 
-    this._http.post("http://localhost:8085/item/save", body).subscribe()
+    this._http.post("http://localhost:8085/item/save", body).subscribe(
+      x=> {console.log(x)
+        alert("added");
+        location.reload();
+
+       }
+    )
 
 
 }

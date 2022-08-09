@@ -46,7 +46,10 @@ export class NewAccountComponent implements OnInit {
     }
 
     this._http.post("http://localhost:8085/employee/save" , body)
-    .subscribe(x=> console.log(x))
+    .subscribe(x=> {console.log(x)
+      alert("added");
+
+     } )
 
    }
 }

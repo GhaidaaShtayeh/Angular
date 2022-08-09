@@ -49,7 +49,11 @@ onSave(): void {
     console.warn(body);
 
     this._http.post("http://localhost:8085/invoiceItem/save", body).subscribe(
-      x=> console.log(x)
+      x=>
+      {console.log(x)
+        alert("added");
+        location.reload();
+       }
     )
 
 }
