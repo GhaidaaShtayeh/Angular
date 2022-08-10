@@ -1,3 +1,4 @@
+import { EditCustomerComponent } from './edit-customer/edit-customer.component';
 import { AddInvoiceItemComponent } from './add-invoice-item/add-invoice-item.component';
 import { InvoiceItemComponent } from './invoice-item/invoice-item.component';
 import { AddItemComponent } from './add-item/add-item.component';
@@ -19,10 +20,15 @@ import { InvoicesHistoryComponent } from './invoices-history/invoices-history.co
 import { EditQuantityComponent } from './edit-quantity/edit-quantity.component';
 import { HomeAudtiorComponent } from './home-audtior/home-audtior.component';
 import { HomeUserComponent } from './home-user/home-user.component';
+import { UsersComponent } from './users/users.component';
+import { EditUserComponent } from './edit-user/edit-user.component';
+import { AddUserComponent } from './add-user/add-user.component';
+import { NewAccountComponent } from './new-account/new-account.component';
 
 
 const routes: Routes = [
-  {path: 'home' , component: RegisterComponent},
+  {path: '' , component: RegisterComponent},
+  {path: 'register' , component: NewAccountComponent},
   { path: 'login', component: LoginComponent },
   { path: 'invoics', component: InvoicesComponent },
   {path: 'update-invoice/:id',component:UpdateInvoiceComponent},
@@ -36,8 +42,13 @@ const routes: Routes = [
   {path:'invoice-item/:id',component:InvoiceItemComponent},
   {path:'add-invoice-item/:id',component:AddInvoiceItemComponent},
   {path:'edit-quantity/:id',component:EditQuantityComponent},
-  {path:'home/auditor',component:HomeAudtiorComponent},
-  {path:'home/user',component:HomeUserComponent}
+  {path:'homeَ',component:HomeAudtiorComponent},
+  {path:'home',component:HomeUserComponent},
+  {path:'employee',component:UsersComponent},
+  {path:'edit-user/:id',component:EditUserComponent},
+  {path:'add-user',component:AddUserComponent},
+  {path:'customer/edit/:id',component:EditCustomerComponent},
+
 
 ];
 

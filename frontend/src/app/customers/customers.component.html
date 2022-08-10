@@ -41,9 +41,8 @@
       <td>{{feedback.lastName}}</td>
       <td>{{feedback.mobileNumber}}</td>
 
-      <td><button type="button" class="btn btn-light">update</button></td>
-      <td><button type="button" class="btn btn-light" routerLink="/Success" routerLinkActive="active" style="background-color: rgb(255, 67, 67);"> Delete</button></td>
-
+      <a class="btn text-warning" [routerLink]="['/customer/edit',feedback.id]" > <i class="fa fa-pencil"> </i>Edit</a>
+      <a class="btn text-danger" (click)="deleteinvoice(feedback.id)"><i class="fa fa-trash-o"></i> Delete</a>
     </tr>
   </tbody>
   <br><br>

@@ -1,0 +1,72 @@
+<section id="contact-page" class="gray-bg">
+  <br><br><br>
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-8">
+              <div class="register-from">
+                  <div class="form_wrapper">
+                    <div class="form_container">
+                      <div class="title_container">
+                        <h2>Register <b>NOW</b> and Join us !</h2>
+                      </div>
+                      <div class="row clearfix">
+                        <div class="">
+                          <form  [formGroup] = "RegisterForm">
+                            <div class="input_field"> <span><i aria-hidden="true" class="fa fa-envelope"></i></span>
+                              <input formControlName="serialNumber" type="number" name="serialNumber"  placeholder="Serial Number" required />
+                            </div>
+                            <div class="input_field"> <span><i aria-hidden="true" class="fa fa-envelope"></i></span>
+                              <input formControlName="email" type="email" name="email" placeholder="Email" required />
+                            </div>
+                            <div class="input_field"> <span><i aria-hidden="true" class="fa fa-envelope"></i></span>
+                              <input formControlName="mobileNumber" type="text" name="mobileNumber" placeholder="Mobile Number" required />
+                            </div>
+                            <div class="input_field"> <span><i aria-hidden="true" class="fa fa-lock"></i></span>
+                              <input formControlName="password" type="password" name="password" placeholder="Password" required />
+                            </div>
+                            <div class="input_field"> <span><i aria-hidden="true" class="fa fa-lock"></i></span>
+                              <input type="password" name="password" placeholder="Re-type Password" required />
+                            </div>
+                            <div class="row clearfix">
+                              <div class="col_half">
+                                <div class="input_field"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                                  <input formControlName="firstName" type="text" name="name" placeholder="First Name" />
+                                </div>
+                              </div>
+                              <div class="col_half">
+                                <div class="input_field"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                                  <input formControlName="lastName" type="text" name="name" placeholder="Last Name" required />
+                                </div>
+                              </div>
+                            </div>
+                            <div class="input_field select_option">
+                              <select>
+                                <option>Select a country</option>
+                                <option>Palestine</option>
+                              </select>
+                              <div class="select_arrow"></div>
+                            </div>
+                              <div class="input_field checkbox_option">
+                                <input type="checkbox" id="cb1">
+                            <label for="cb1">I agree with terms and conditions</label>
+                              </div>
+                              <div class="input_field checkbox_option">
+                                <input type="checkbox" id="cb2">
+                            <label for="cb2">I want to receive the newsletter</label>
+                              </div>
+                              <p>u are a member?  <a href="login">log in</a></p>
+
+                            <input routerLink="/login" routerLinkActive="active"  type="submit" (click)="onSave()"  class="button" type="submit" value="Register" />
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </div> <!--  contact from -->
+          </div>
+      </div>
+  </div>
+  <br><br><br>
+
+</section>
+<!-- ////////////////////////////////////////////////////////////////////////////////////////////       -->

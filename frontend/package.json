@@ -19,6 +19,8 @@
     "@angular/platform-browser-dynamic": "^14.0.3",
     "@angular/router": "^14.0.3",
     "@auth0/angular-jwt": "^5.0.2",
+    "@fortawesome/fontawesome-svg-core": "^6.1.2",
+    "@fortawesome/free-solid-svg-icons": "^6.1.2",
     "@material/radio": "^14.0.0",
     "@types/datatables.net": "^1.10.22",
     "@types/jquery": "^3.5.14",

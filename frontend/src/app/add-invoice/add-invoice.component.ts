@@ -1,6 +1,7 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import jwt_decode from 'jwt-decode';
 
 @Component({
   selector: 'app-add-invoice',
@@ -8,6 +9,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./add-invoice.component.css']
 })
 export class AddInvoiceComponent implements OnInit {
+
+  tokenInfo:  any;
 
 
   addstudentform: FormGroup = this._formbuilder.group({
@@ -17,6 +20,7 @@ export class AddInvoiceComponent implements OnInit {
     employeeSerialNumber: ['', Validators.required],
 
 });
+
   file!: File ;
   base64textString!: string;
 
@@ -24,7 +28,17 @@ constructor(private _formbuilder: FormBuilder,
     private _http: HttpClient
 ) { }
 
-ngOnInit(): void { }
+ngOnInit(): void {
+  /*let headers = new HttpHeaders({
+    'Content-Type': 'application/json',
+    'Authorization': 'Bearer '+ localStorage.getItem("access_token")!
+  });*/
+  this.tokenInfo = jwt_decode(localStorage.getItem("access_token")!);
+
+  console.log(this.tokenInfo)
+  console.log(this.tokenInfo.serialNumber)
+
+}
 
 
 _handleReaderLoaded(readerEvt: any) {
@@ -50,7 +64,7 @@ onSave(): void {
   let serialNumber = this.addstudentform.get('serialNumber')?.value;
   let status = this.addstudentform.get('status')?.value;
   let customerSerialNumber =this.addstudentform.get('customerSerialNumber')?.value;
-  let employeeSerialNumber = this.addstudentform.get('employeeSerialNumber')?.value;
+  let employeeSerialNumber = this.tokenInfo.serialNumber;
   let photo = this.addstudentform.get('photo')?.value;
 
 
@@ -71,7 +85,10 @@ onSave(): void {
   formData.append('photo', this.base64textString);
   console.log(formData.getAll("photo"));*/
 
-  this._http.post("http://localhost:8085/invoice/save", body).subscribe()
+  this._http.post("http://localhost:8085/invoice/save", body).subscribe(x=>{console.log(x)
+  alert("added");
+  location.reload();
+ })
 
 }
 

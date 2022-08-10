@@ -13,6 +13,7 @@
                   <p>
                     An invoice management system is an online internal business system that manages invoice documents from vendors and suppliers.
                   </p>
+                  <p>Not a member? <a href="register">Register</a> or <a href="login">log in</a></p>
               </div>
           </div> <!-- about cont -->
           <div class="col-lg-7">
@@ -24,86 +25,9 @@
       <br><br>
   </div>
 </section>
-<section id="contact-page" class="gray-bg">
-  <br><br><br>
-  <div class="container">
-      <div class="row">
-          <div class="col-lg-8">
-              <div class="register-from">
-                  <div class="section-title">
-                      <h3>Register <b>NOW</b> and Join us !</h3>
-                  </div>
-                  <div class="main-form pt-45">
-                      <form id="register-form" [formGroup] = "RegisterForm">
-                          <div class="row">
-                              <div class="col-md-6">
-                                  <div class="singel-form form-group">
-                                      <input formControlName="firstName" type="text" name="firstName" type="text" placeholder="Your First Name" required="required">
-                                  </div>
-                              </div>
-                              <div class="col-md-6">
-                                  <div class="singel-form form-group">
-                                      <input formControlName="lastName"  type="text" name="lastName" type="text" placeholder="Your last Name" required="required">
-                                  </div>
-                              </div>
-                              <div class="col-md-12">
-                                  <div class="singel-form form-group ">
-                                      <input formControlName="serialNumber" type="number" name="serialNumber"  placeholder="Your serial Number"  required="required">
-                                  </div>
-                              </div>
 
-                              <div class="col-md-12">
-                                <div class="singel-form form-group ">
-                                    <input [max]= 3 title="Error Message" pattern="[1-3]{1}[0-3]{3}" formControlName="roleId" type="number" name="roleId"  placeholder="Your role Id"  required="required"> 1 : Super User 2 : User 3 : Auditor
-                                </div>
-                            </div>
 
-                              <div class="col-md-12">
-                                <div class="singel-form form-group ">
-                                    <input formControlName="email" type="text" name="email"  placeholder="Your email"  required="required">
-                                </div>
-                              </div>
-                                <div class="col-md-12">
-                                  <div class="singel-form form-group ">
-                                      <input formControlName="mobileNumber" type="text" name="mobileNumber"  placeholder="Your mobileNumber"  required="required">
-                                  </div>
-                            </div>
-                            <div class="col-md-12">
-                              <div class="singel-form form-group ">
-                                  <input formControlName="country" type="text" name="country"  placeholder="Your country"  required="required">
-                              </div>
-                            </div>
-                            <div class="col-md-12">
-                              <div class="singel-form form-group ">
-                                  <input formControlName="password" type="password" name="password"  placeholder="Your password"  required="required">
-                              </div>
-                            </div>
-
-                            <div class="col-md-12">
-                              <div class="singel-form form-group ">
-                                  <input  type="password"   placeholder="Confirm password"  required="required">
-                              </div>
-                            </div>
-                            <br><br>
-                            <a routerLink="/login" routerLinkActive="active"><b>   click here if u have an account</b></a>
-                            <br> <br>
-                              <div class="col-md-12">
-                                  <div class="singel-form">
-                                      <button routerLink="/login" routerLinkActive="active"  type="submit" (click)="onSave()" class="main-btn">REGISTER</button>
-                                  </div>
-                              </div>
-
-                          </div>
-
-                      </form>
-                  </div> <!-- main form -->
-              </div> <!--  contact from -->
-          </div>
-      </div>
-  </div>
-  <br><br><br>
-
-</section>
+<!--====== PATNAR LOGO PART ENDS ======-->
 
 <div id="patnar-logo" class="pt-40 pb-80 gray-bg">
   <br><br>
@@ -128,9 +52,7 @@
       </div>
       <br><br><br>
       </div> <!-- row -->
-
-
-<!--====== PATNAR LOGO PART ENDS ======-->
+</div>
 
 <!--====== COUNTER PART ENDS ======-->
 

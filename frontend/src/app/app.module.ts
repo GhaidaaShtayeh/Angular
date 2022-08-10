@@ -25,8 +25,18 @@ import { EditQuantityComponent } from './edit-quantity/edit-quantity.component';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { HomeAudtiorComponent } from './home-audtior/home-audtior.component';
 import { HomeUserComponent } from './home-user/home-user.component';
+import { UsersComponent } from './users/users.component';
+import { EditUserComponent } from './edit-user/edit-user.component';
+import { AddUserComponent } from './add-user/add-user.component';
+import { EditCustomerComponent } from './edit-customer/edit-customer.component';
 
+import { library, icon } from '@fortawesome/fontawesome-svg-core'
+import { faCamera } from '@fortawesome/free-solid-svg-icons';
+import { NewAccountComponent } from './new-account/new-account.component'
 
+library.add(faCamera)
+
+const camera = icon({ prefix: 'fas', iconName: 'camera' })
 
 @NgModule({
   declarations: [
@@ -47,7 +57,12 @@ import { HomeUserComponent } from './home-user/home-user.component';
     AddInvoiceItemComponent,
     EditQuantityComponent,
     HomeAudtiorComponent,
-    HomeUserComponent
+    HomeUserComponent,
+    UsersComponent,
+    EditUserComponent,
+    AddUserComponent,
+    EditCustomerComponent,
+    NewAccountComponent
   ],
   imports: [
     BrowserModule,

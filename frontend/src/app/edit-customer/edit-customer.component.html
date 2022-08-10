@@ -1,0 +1,35 @@
+<div class="login-box">
+  <h2>Edit Customer</h2>
+  <form class="form" [formGroup]="editStudentform">
+    <div class="user-box">
+      <input name="serialNumber" required="" formControlName="serialNumber" type="number">
+      <label>serial Number</label>
+    </div>
+    <div class="user-box">
+      <input name="firstName" required="" formControlName="firstName" type="text">
+      <label>firstName</label>
+    </div>
+    <div class="user-box">
+      <input name="lastName" required="" formControlName="lastName" type="text">
+      <label>lastName</label>
+    </div>
+    <div class="user-box">
+      <input name="email" required="" formControlName="email" type="text">
+      <label>email</label>
+    </div>
+    <div class="user-box">
+      <input name="mobileNumber" required="" formControlName="mobileNumber" type="text">
+      <label>mobileNumber</label>
+    </div>
+
+
+    <a routerLink="/customer" routerLinkActive="active" (click)="editStudent()" type="submit" >
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      Edit
+    </a>
+
+  </form>
+</div>
