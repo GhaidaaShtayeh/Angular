@@ -66,12 +66,12 @@ export class AuthService {
       }
       else if(this.tokenInfo.role === "AUDITOR"){
 
-        this.router.navigate(['/home/auditor']);
+        this.router.navigate(['/homeَ']);
 
       }
       else if(this.tokenInfo.role === "USER"){
 
-        this.router.navigate(['/home/user']);
+        this.router.navigate(['/home']);
 
       }
     }

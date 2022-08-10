@@ -9,6 +9,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./edit-quantity.component.css']
 })
 export class EditQuantityComponent implements OnInit {
+  itemsList: Array<any> = [];
 
 
   editStudentform: FormGroup = this._formbuilder.group({
@@ -25,13 +26,18 @@ export class EditQuantityComponent implements OnInit {
     invoice : any;
 
   ngOnInit(): void {
-   this.id = this.route.snapshot.params['id'];
-  }
+    this.id = this.route.snapshot.params['id'];
+  this._http
+  .get('http://localhost:8085/item/viewList')
+  .subscribe((response: any) => {
+    this.itemsList = response;
+  });
+ }
 
   editStudent(){
     const headers = new HttpHeaders({'Authorization': 'Bearer ' + localStorage.getItem("access_token")});
     let quantity = this.editStudentform.get('quantity')?.value;
-    let itemSerialNumber = this.editStudentform.get('itemSerialNumber')?.value;
+    let itemSerialNumber = Number((<HTMLSelectElement>document.getElementById('select')).value);
     let invoiceSerialNumber = this.id;
 
     let url = "http://localhost:8085/invoiceItem/updateQuantity/"+this.id;

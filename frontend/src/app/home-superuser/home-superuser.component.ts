@@ -12,7 +12,6 @@ import { PostService } from '../_services/post.service';
 })
 export class HomeSuperuserComponent implements OnInit {
   posts:any;
-  //if it doesn't work try it with 1
   p: number = 0;
   private _http: any;
 
@@ -33,7 +32,7 @@ export class HomeSuperuserComponent implements OnInit {
   }
 
   deleteinvoice(id: number)  {
-    const url = 'http://localhost:8085/invoice/deleteInvoice/14';
+    const url = 'http://localhost:8085/invoice/deleteInvoice/'+id;
     console.log(id);
     console.log(url+id);
     this.http.get<any>(url).subscribe(res=> {console.log(res)});

@@ -5,9 +5,11 @@
     <h1 class ="header" > Add new item </h1>
 
     <input formControlName="quantity" type="number" placeholder=" quantity "><br>
-    <input formControlName="itemSerialNumber" type="text" placeholder=" item serial number"><br>
-
-    <button  routerLink="/invoics" routerLinkActive="active" (click)="onSave()" type="submit" class="main-btn"> Save</button>
+    <select id = "select" style="width: 40%;">
+      <option>Select an item</option>
+      <option *ngFor="let item of itemsList" value={{item.serialNumber}}>{{item.name}}</option>
+    </select><br>
+    <button routerLinkActive="active" (click)="onSave()" type="submit" class="main-btn"> Save</button>
 
   </form>
 

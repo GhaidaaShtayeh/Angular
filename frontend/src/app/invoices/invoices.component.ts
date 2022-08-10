@@ -34,6 +34,14 @@ export class InvoicesComponent implements OnInit {
         this.inovoicesList = response;
       });
   }
+
+ serach(){
+  let input = document.getElementById("input_search") as HTMLInputElement
+ let id = Number(input?.value)
+    this._http.get<any>("http://localhost:8085/invoice/search/"+id)
+    .subscribe(x=> this.inovoicesList = x)
+  }
+
   deleteinvoice(id: number)  {
     const url = 'http://localhost:8085/invoice/deleteInvoice/'+id;
     console.log(id);

@@ -20,12 +20,19 @@
   <br><br><br>
 </section>
 <br><br>
-<div class="search-hero">
-  <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="&#61442;  Start searching by id">
+<div class="wrap">
+  <br><br>
+  <div class="search">
+     <input id = "input_search" type="text" class="searchTerm" placeholder="Search Invoice by Serial Number" style="height: 37px;">
+     <button type="submit" class="searchButton" (click)="serach()">
+       <i class="fa fa-search"></i>
+    </button>
+  </div>
+  <br><br>
 </div>
 <table>
   <thead>
-    <tr>
+    <tr >
       <th>Serial Number</th>
       <th>created date</th>
       <th></th>
@@ -37,8 +44,9 @@
       <td>{{invoice.createdDate | date:'medium' }}</td>
 
         <a class="btn text-warning"[routerLink]="['/update-invoice',invoice.serialNumber]" ><i class="fa fa-pencil"></i> Edit</a>
-        <a class="btn text-danger" (click)="deleteinvoice(invoice.id)">Delete</a>
-        <a [routerLink]="['/invoicehistory',invoice.serialNumber]"  style="color:gray;"> History</a>
+        <a class="btn text-danger" (click)="deleteinvoice(invoice.id)"><i class="fa fa-trash-o"></i>Delete</a>
+        <a [routerLink]="['/invoicehistory',invoice.serialNumber]"  style="color:gray;"> <i class="fa fa-history" aria-hidden="true"></i>
+           History</a>
     </tr>
   </tbody>
   <br><br>
