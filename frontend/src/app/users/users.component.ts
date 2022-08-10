@@ -17,6 +17,7 @@ export class UsersComponent implements OnInit {
       .get('http://localhost:8085/employee/viewList')
       .subscribe((response: any) => {
         this.inovoicesList = response;
+        console.log(response)
       });
   }
 

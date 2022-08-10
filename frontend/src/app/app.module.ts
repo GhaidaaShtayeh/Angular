@@ -28,8 +28,15 @@ import { HomeUserComponent } from './home-user/home-user.component';
 import { UsersComponent } from './users/users.component';
 import { EditUserComponent } from './edit-user/edit-user.component';
 import { AddUserComponent } from './add-user/add-user.component';
+import { EditCustomerComponent } from './edit-customer/edit-customer.component';
 
+import { library, icon } from '@fortawesome/fontawesome-svg-core'
+import { faCamera } from '@fortawesome/free-solid-svg-icons';
+import { NewAccountComponent } from './new-account/new-account.component'
 
+library.add(faCamera)
+
+const camera = icon({ prefix: 'fas', iconName: 'camera' })
 
 @NgModule({
   declarations: [
@@ -53,7 +60,9 @@ import { AddUserComponent } from './add-user/add-user.component';
     HomeUserComponent,
     UsersComponent,
     EditUserComponent,
-    AddUserComponent
+    AddUserComponent,
+    EditCustomerComponent,
+    NewAccountComponent
   ],
   imports: [
     BrowserModule,

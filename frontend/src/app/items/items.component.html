@@ -24,8 +24,7 @@
     <tr>
       <th>Serial Number</th>
       <th>Status</th>
-      <th>created date</th>
-      <th></th>
+      <th>unit price</th>
       <th></th>
     </tr>
   </thead>
@@ -35,8 +34,10 @@
       <td>{{item.name}}</td>
       <td>{{item.unitPrice}}</td>
 
-      <td><button type="button" class="btn btn-light" [routerLink]="['/update-invoice',item.id]">update</button></td>
-      <td><button type="button" class="btn btn-light" routerLink="/Success" routerLinkActive="active" style="background-color: rgb(255, 67, 67);"> Delete</button></td>
+      <td data-title="Options">
+        <a class="btn text-warning "[routerLink]="['/update-invoice',item.id]"><i class="fa fa-pencil"></i> Edit</a>
+        <a class="btn text-danger" (click)="deleteitem(item.serialNumber)"> <i class="fa fa-trash-o"></i> Delete</a>
+      </td>
     </tr>
   </tbody>
   <br><br>

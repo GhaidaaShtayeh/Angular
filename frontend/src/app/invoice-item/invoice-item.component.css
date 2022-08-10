@@ -12,6 +12,12 @@
 	width: 100%;
 	z-index: 1;
 }
+.label {
+  color: white;
+  padding: 8px;
+  font-family: Arial;
+}
+.success {background-color: #04AA6D;} /* Green */
 
 [data-overlay="8"]::before {
 	opacity: 0.8;

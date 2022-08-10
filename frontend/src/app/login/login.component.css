@@ -1,36 +1,9 @@
-.divider:after,
-.divider:before {
-content: "";
-flex: 1;
-height: 1px;
-background: #eee;
-}
-.h-custom {
-height: calc(100% - 73px);
-}
-@media (max-width: 450px) {
-.h-custom {
-height: 100%;
-}
+.container{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f3f3f3;
 }
 
-.main-btn {
-  display:block;
-  font-weight: 500;
-  border: 1px solid #ffc600;
-  padding: 0 35px;
-  font-size: 20px;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  line-height: 50px;
-  border-radius: 5px;
-  color: #07294d;
-  z-index: 5;
-  background-color: #ffc600;
-
-  }
-  .main-btn:hover{
-    color: #ffc600;
-    border-color: #07294d;
-    background-color: #07294d;
-  }

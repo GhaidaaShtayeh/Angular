@@ -1,1 +1,78 @@
-<p>add-user works!</p>
+<section id="contact-page" class="gray-bg">
+  <br><br><br>
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-8">
+              <div class="register-from">
+                  <div class="section-title">
+                      <h3>Add new user !</h3>
+                  </div>
+                  <div class="main-form pt-45">
+                      <form id="register-form" [formGroup] = "RegisterForm">
+                          <div class="row">
+                              <div class="col-md-6">
+                                  <div class="singel-form form-group">
+                                      <input formControlName="firstName" type="text" name="firstName" type="text" placeholder="Your First Name" required="required">
+                                  </div>
+                              </div>
+                              <div class="col-md-6">
+                                  <div class="singel-form form-group">
+                                      <input formControlName="lastName"  type="text" name="lastName" type="text" placeholder="Your last Name" required="required">
+                                  </div>
+                              </div>
+                              <div class="col-md-12">
+                                  <div class="singel-form form-group ">
+                                      <input formControlName="serialNumber" type="number" name="serialNumber"  placeholder="Your serial Number"  required="required">
+                                  </div>
+                              </div>
+
+                                <select id = "select" style="margin-left: 30px; margin-bottom:20px; width: 2000px;"  >
+                                  <option>Select a role</option>
+                                  <option value= 2 >user</option>
+                                  <option value= 3 >super user</option>
+                                  <option value= 14 >auditor</option>
+                                </select>
+
+                              <div class="col-md-12">
+                                <div class="singel-form form-group ">
+                                    <input formControlName="email" type="text" name="email"  placeholder="Your email"  required="required">
+                                </div>
+                              </div>
+                                <div class="col-md-12">
+                                  <div class="singel-form form-group ">
+                                      <input formControlName="mobileNumber" type="text" name="mobileNumber"  placeholder="Your mobileNumber"  required="required">
+                                  </div>
+                            </div>
+                            <select id = "select" style="margin-left: 30px; margin-bottom:20px; width: 2000px; ">
+                              <option>Select a country</option>
+                              <option  >Palestine</option>
+                            </select>
+                            <div class="col-md-12">
+                              <div class="singel-form form-group ">
+                                  <input formControlName="password" type="password" name="password"  placeholder="Your password"  required="required">
+                              </div>
+                            </div>
+
+                            <div class="col-md-12">
+                              <div class="singel-form form-group ">
+                                  <input  type="password"   placeholder="Confirm password"  required="required">
+                              </div>
+                            </div>
+
+                              <div class="col-md-12">
+                                  <div class="singel-form">
+                                      <button routerLink="/employee" routerLinkActive="active"  type="submit" (click)="onSave()" class="main-btn">REGISTER</button>
+                                  </div>
+                              </div>
+
+                          </div>
+
+                      </form>
+                  </div> <!-- main form -->
+              </div> <!--  contact from -->
+          </div>
+      </div>
+  </div>
+  <br><br><br>
+
+</section>
